@@ -46,16 +46,26 @@ const LoginForm = () => {
   };
 
   useEffect(() => {
-    JSON.parse(localStorage.getItem("obj"));
+    const check_id = document.getElementById("checkid");
+    const ID = check_id.value;
+    const check_pw = document.getElementById("checkpw");
+    const PASSWORD = check_pw.value;
+    const jsonValue = JSON.parse(localStorage.getItem("obj"));
+    console.log(jsonValue);
+    // JSON.parse(localStorage.getItem("obj"));
     if (submit) {
-      if (id === localStorage.value.id && pw === localStorage.value.pw) {
+      console.log(window.localStorage);
+      if (
+        ID === localStorage.getItem("id").value &&
+        PASSWORD === localStorage.getItem("pw").value
+      ) {
         alert("로그인 성공");
         console.log("로그인 성공");
       } else {
         console.log("로그인 실패");
       }
     }
-  });
+  }, [submit]);
 
   return (
     <form onSubmit={handleSubmit}>
@@ -63,12 +73,12 @@ const LoginForm = () => {
       <ul>
         <li>
           <label htmlFor="userid">아이디</label>
-          <input type="text" name="userid" {...id} />
+          <input type="text" name="userid" id="checkid" {...id} />
           {errors.userid && <span>{errors.userid}</span>}
         </li>
         <li>
           <label htmlFor="password">패스워드</label>
-          <input type="password" name="password" {...pw} />
+          <input type="password" name="password" id="checkpw" {...pw} />
           {errors.password && <span>{errors.password}</span>}
         </li>
         <li>
