@@ -46,14 +46,17 @@ const LoginForm = () => {
   };
 
   useEffect(() => {
+    JSON.parse(localStorage.getItem("obj"));
     if (submit) {
-      console.log("로그인 완료");
-      if (Object.keys(errors).length === 0) {
-        alert("로그인 되었습니다.");
+      if (id === localStorage.value.id && pw === localStorage.value.pw) {
+        alert("로그인 성공");
+        console.log("로그인 성공");
+      } else {
+        console.log("로그인 실패");
       }
-      setSubmit(false);
     }
-  }, [errors]);
+  });
+
   return (
     <form onSubmit={handleSubmit}>
       <h2>로그인</h2>

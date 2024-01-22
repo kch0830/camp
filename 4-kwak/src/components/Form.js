@@ -61,6 +61,7 @@ const Form = () => {
     console.log(addStorage);
     // 여기 콘솔에 찍힌 arr를 로컬에 저장하자!!
     setAddStorage([{ id, pw }, ...addStorage]);
+    localStorage.setItem("obj", JSON.stringify({ id: id, pw: pw }));
   };
 
   return (
