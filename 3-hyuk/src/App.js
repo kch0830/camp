@@ -51,6 +51,27 @@ function App() {
       todolist: newTodoList,
     });
   };
+
+  // search기능 만드는중인데 뭔말인고이게..
+  // https://www.freecodecamp.org/korean/news/build-a-search-filter-using-react-and-react-hooks/
+  // const [searchInput, setSearchInput] = useState("");
+  // const searchItems = () => {
+  //   setSearchInput(searchValue);
+  //   todoState.filter((item) => {
+  //     return Object.values(item)
+  //       .join("")
+  //       .toLowerCase()
+  //       .includes(searchInput.toLowerCase());
+  //   });
+  // };
+
+  // const filteredData = todoState.filter((item) => {
+  //   return Object.values(item)
+  //     .join("")
+  //     .toLowerCase()
+  //     .includes(searchInput.toLocaleLowerCase());
+  // });
+
   return (
     <div className="App">
       <HeaderInput
@@ -63,6 +84,8 @@ function App() {
         onDelete={onDelete}
         onToggle={onToggle}
       />
+
+      {/* <input type="text" onChange={() => searchItems(e.target.value)} /> */}
     </div>
   );
 }
