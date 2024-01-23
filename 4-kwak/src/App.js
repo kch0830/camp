@@ -1,12 +1,12 @@
-import Form from "./components/Form";
-import LoginForm from "./components/LoginForm";
+import { Route, Routes } from "react-router-dom";
+import Home from "./components/Home";
 
 function App() {
   return (
     <div className="App">
-      <Form />
-
-      <LoginForm />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </div>
   );
 }

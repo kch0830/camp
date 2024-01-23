@@ -55,10 +55,7 @@ const LoginForm = () => {
     // JSON.parse(localStorage.getItem("obj"));
     if (submit) {
       console.log(window.localStorage);
-      if (
-        ID === localStorage.getItem("id").value &&
-        PASSWORD === localStorage.getItem("pw").value
-      ) {
+      if (ID === jsonValue.id.value && PASSWORD === jsonValue.pw.value) {
         alert("로그인 성공");
         console.log("로그인 성공");
       } else {
