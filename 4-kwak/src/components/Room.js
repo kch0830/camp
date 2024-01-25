@@ -1,6 +1,6 @@
 import React from "react";
-import "./Room.css";
-import Calendar from "./Calendar";
+import "./css/Room.css";
+import Calendar from "react-calendar";
 
 const Room = () => {
   const reservation = () => {
@@ -21,9 +21,10 @@ const Room = () => {
         <button className="box-site-list" onClick={reservation}>
           4번사이트
         </button>
-      </div>
-      <div className="reservation-form">
-        <Calendar />
+
+        <div>
+          <Calendar />
+        </div>
       </div>
     </>
   );

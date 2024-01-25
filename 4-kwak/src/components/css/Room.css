@@ -12,11 +12,3 @@
   grid-gap: 40px; /* 사이 간격 조절 */
   width: 600px; /* 적절한 너비 조절 */
 }
-
-.reservation-form {
-  width: 600px;
-  height: 600px;
-  border: 2px;
-  border-color: black;
-  float: right;
-}
