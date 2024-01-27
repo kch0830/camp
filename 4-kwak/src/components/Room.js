@@ -21,7 +21,6 @@ const Room = () => {
         <button className="box-site-list" onClick={reservation}>
           4번사이트
         </button>
-
         <div>
           <Calendar />
         </div>
