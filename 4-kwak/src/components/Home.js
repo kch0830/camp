@@ -15,6 +15,9 @@ const Home = () => {
           <li>
             <Link to="/Room">Room</Link>
           </li>
+          <li>
+            <Link to="/Calendar">Calendar</Link>
+          </li>
         </ul>
       </div>
     </>

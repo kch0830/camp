@@ -3,6 +3,7 @@ import Home from "./components/Home";
 import Room from "./components/Room";
 import LoginForm from "./components/LoginForm";
 import Form from "./components/Form";
+import Chan from "./components/Calendar";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="LoginForm" element={<LoginForm />} />
         <Route path="Form" element={<Form />} />
         <Route path="Room" element={<Room />} />
+        <Route path="Calendar" element={<Chan />} />
       </Routes>
     </div>
   );
